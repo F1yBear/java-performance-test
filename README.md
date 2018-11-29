@@ -46,34 +46,23 @@ public class JMHFirstBenchmark {
 ```
 ```
 # JMH version: 1.19
-# VM version: JDK 1.8.0_144, VM 25.144-b01
-# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
-# VM options: -javaagent:/home/lijun/Downloads/idea-IU-172.3317.76/lib/idea_rt.jar=36941:/home/lijun/Downloads/idea-IU-172.3317.76/bin -Dfile.encoding=UTF-8
+# VM version: JDK 1.8.0_152, VM 25.152-b16
+# VM invoker: C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exeIDEA 2017.3.5\bin -Dfile.encoding=UTF-8
 # Warmup: 3 iterations, 1 s each
 # Measurement: 3 iterations, 1 s each
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: normaltest.JMHFirstBenchmark.sleepAWhile
+# Benchmark: cn.fexo.JMHFirstBenchmark.sleepAWhile
 
 # Run progress: 0.00% complete, ETA 00:00:06
 # Fork: 1 of 1
-# Warmup Iteration   1: 50189.958 us/op
-# Warmup Iteration   2: 50074.371 us/op
-# Warmup Iteration   3: 50075.263 us/op
-Iteration   1: 50071.800 us/op
-Iteration   2: 50074.029 us/op
-Iteration   3: 50072.798 us/op
-
-Result "normaltest.JMHFirstBenchmark.sleepAWhile":
-  50072.876 ±(99.9%) 20.367 us/op [Average]
-  (min, avg, max) = (50071.800, 50072.876, 50074.029), stdev = 1.116
-  CI (99.9%): [50052.509, 50093.242] (assumes normal distribution)
-
-# Run complete. Total time: 00:00:06
-
-Benchmark                      Mode  Cnt      Score    Error  Units
-JMHFirstBenchmark.sleepAWhile  avgt    3  50072.876 ± 20.367  us/op
+# Warmup Iteration   1: 50924.558 us/op
+# Warmup Iteration   2: 50960.144 us/op
+# Warmup Iteration   3: 50927.677 us/op
+Iteration   1: 50961.230 us/op
+Iteration   2: 50963.006 us/op
+Iteration   3: 50963.282 us/op
 ```
 
 对 sleepAWhile() 的测试结果显示执行时间平均约为50毫秒。因为我们的测试对象 sleepAWhile() 正好就是睡眠50毫秒，所以 JMH 显示的结果可以说很符合我们的预期。
